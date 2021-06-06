@@ -10,7 +10,7 @@
     "phone": "+65 8247 4652",
     "address": {
       "street": "(Your Street)",
-      "city": "(Your City)",
+      "city": "Singapore",
       "state": "(Your State)",
       "zip": "(Your Zip/Postal Code)"
     },
@@ -97,10 +97,10 @@
   "portfolio": {
     "projects": [
       {
-        "title": "Canadian Wanderlust",
-        "category": "My Travel Blog for my post-university travels",
-        "image": "canadian-wanderlust.jpg",
-        "url": "https://www.canadianwanderlust.com"
+        "title": "Music Moods",
+        "category": "A music recommendation system that gives you song recoomendations depending on your mood!",
+        "image": "",
+        "url": ""
       },
       {
         "title": "Fury Fighting Gear",
@@ -135,7 +135,7 @@
         "user": "Kareem Abdul Jabbar"
       },
       {
-        "text": "That Tim Baker must be one of the most brilliant developers I've ever met! It is amazing that nobody has hired him yet. Hey you, you should hire this guy, he may be fresh out of University and have zero on the job experience but I am confident that he will be one of your best developers in no time!",
+        "text": "",
         "user": "Steve Wozniak... impersonator"
       }
     ]
