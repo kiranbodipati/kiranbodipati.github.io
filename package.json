@@ -1,4 +1,5 @@
 {
+  "homepage": "https://kiranbodipati.github.io",
   "name": "react-resume-template",
   "version": "2.0.0",
   "private": true,
@@ -9,7 +10,9 @@
     "dev": "yarn compile && yarn next dev",
     "lint": "yarn run -T prettier --write './src/**/*.{js,jsx,json,ts,tsx}' && eslint './src/**/*.{js,jsx,ts,tsx}' --fix --max-warnings=0",
     "start": "yarn next start",
-    "sitemap": "yarn next-sitemap"
+    "sitemap": "yarn next-sitemap",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.16",
