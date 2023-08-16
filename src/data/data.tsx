@@ -1,19 +1,26 @@
 import {
-  AcademicCapIcon,
   ArrowDownTrayIcon,
   BuildingOffice2Icon,
   CalendarIcon,
   FlagIcon,
   MapIcon,
   SparklesIcon,
+  BuildingLibraryIcon,
+  EnvelopeOpenIcon,
+  PhoneIcon,
 } from '@heroicons/react/24/outline';
+
+import {
+  AcademicCapIcon,
+  EnvelopeIcon,
+} from '@heroicons/react/24/solid';
 
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
-import heroImage from '../images/header-background.webp';
+import heroImage from '../images/wallpaper.jpg';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
@@ -44,18 +51,18 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Kiran Bodipati\'s Personal Website',
+  description: "My Portfolio Website",
 };
 
 /**
  * Section definition
  */
 export const SectionId = {
-  Hero: 'hero',
+  Hero: 'home',
   About: 'about',
   Contact: 'contact',
-  Portfolio: 'portfolio',
+  Portfolio: 'projects',
   Resume: 'resume',
   Skills: 'skills',
   Stats: 'stats',
@@ -69,32 +76,26 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Kiran Bodipati`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a graduate from <strong className="text-stone-100">Nanyang Technological University</strong>, specialising in <strong className="text-stone-100">Data Science and Artificial Intelligence.</strong> I'm currently a Co-Founder at
+        <strong className="text-stone-100"> MyProp India</strong>, building a technology driven real estate management solution.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        In my free time time, you can catch me <strong className="text-stone-100">Scuba Diving</strong>,
+        writing <strong className="text-stone-100">poems</strong>, or exploring nature{' '}
+        <strong className="text-stone-100">around the world</strong>.
       </p>
     </>
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
+      href: 'https://drive.google.com/file/d/1YCb6cvcfYZCKJ9Me4lCNcaM-SJte_z_k/view?usp=sharing',
       text: 'Resume',
       primary: true,
       Icon: ArrowDownTrayIcon,
-    },
-    {
-      href: `#${SectionId.Contact}`,
-      text: 'Contact',
-      primary: false,
     },
   ],
 };
@@ -104,16 +105,16 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: ` Hi! I'm Kiran and I'm a graduate of Data Science and AI at NTU Singapore. I've spent the last four years exploring my passion for AI by working on various projects in various domains like NLP, Computer Vision, Graph networks, etc. Through my experiences, I've had the opportunity to improve my skills, and uphold my passion of utilizing technology for the betterment of humankind. `,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Phone', text: '+91 77609 53029 / +65 8247 4652', Icon: PhoneIcon},
+    {label: 'Email', text: 'kiranbodipati@gmail.com', Icon: EnvelopeOpenIcon},
+    {label: 'Study', text: 'Nanyang Technological University, Singapore', Icon: BuildingLibraryIcon},
+    {label: 'Employment', text: 'LandWatchman Technologies Pvt Ltd', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Bangalore / Singapore', Icon: MapIcon},
+    {label: 'Age', text: '23', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'Indian', Icon: FlagIcon},
+    {label: 'Interests', text: 'Scuba Diving, Travelling, Poetry, Taylor Swift', Icon: SparklesIcon},
   ],
 };
 
@@ -268,39 +269,60 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'August 2019 - Jun 2023',
+    location: 'Nanyang Technological University',
+    title: 'Bachelor of Science(Honours - Distinction) in Data Science and Artificial Intelligence',
+    content: <p>I also have a Minor in Business. Some relevant coursework are Data Science, Machine Learning, Data Structures and Algorithms, Linear Algebra, Calculus, Probability Theories, Statistics, OODP, Databases, Artificial Intelligence, Machine Learning, Software Engineering, Deep Learning & Neural Networks, Data Mining, NLP, Regression Analysis, Computational Finance, Data Visualisation, Product Science, Time series analysis, Information Retrieval.</p>,
   },
-  {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
-  },
+  // {
+  //   date: 'March 2003',
+  //   location: 'School of Business',
+  //   title: 'What did you study 101',
+  //   content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+  // },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'May 2023 - Present',
+    location: 'Land Watchman Technologies Pvt Ltd',
+    title: 'Co-Founder & Data Scientist',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+          Building a Face Identification model using PyTorch to count users walking in and out of stores, provide analytics of customer behaviours in stores, improve customer hospitality, & provide ease of customer checkout at purchase point.
+          Collaborated in business development, business expansion strategies and customer acquisition strategies.
       </p>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'January 2022 - May 2022',
+    location: 'HP Inc',
+    title: 'Data Science Intern',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+          Performed Root cause analysis for fault detection in manufacturing processes using Bayesian Belief Networks to reduce downtime by 15%.
+          Developed pre-processing tool of automation pipeline, incremental learning algorithms to update the BBN and leveraged Pytest to unit test the tool, and FastAPI, Streamlit & Plotly to deploy the user-interface.
+      </p>
+    ),
+  },
+  {
+    date: 'May 2021 - November 2021',
+    location: 'Shopee Singapore',
+    title: 'Data Science Intern',
+    content: (
+      <p>
+          Developed a general brand detection model pipeline to identify logos in daily objects present in product listings and classify brands by employing the OpenCV, YOLOv5 and Pytorch Frameworks.
+          Employed image pre-processing techniques, produced custom training edge cases, finetuned open-source CNN models, etc to improve recall & precision from 0.1 to 0.35 & 0.6 respectively (150 class model)
+      </p>
+    ),
+  },
+  {
+    date: 'July 2021 - September 2021',
+    location: 'Ubisoft Singapore',
+    title: 'Full Stack Project Intern',
+    content: (
+      <p>
+          Designed end-to-end video game credits extraction service using OCR model to extract names and job titles of various people working on the game. Created a Flask and React based website to bind profiles of people listed in-game to Linkedin profiles, to deliver a real time search repository of game developers.
       </p>
     ),
   },
@@ -365,9 +387,9 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/kiranbodipati'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/kiranbodipati/'},
+  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/kiran.bodipati'},
+  {label: 'Google Scholar', Icon: AcademicCapIcon, href: 'https://scholar.google.com/citations?user=hb2FzQYAAAAJ&hl=en'},
+  {label: 'Email', Icon: EnvelopeIcon, href: 'mailto:kiranbodipati@gmail.com'},
 ];
