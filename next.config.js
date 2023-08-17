@@ -22,11 +22,13 @@ const nextConfig = {
   productionBrowserSourceMaps: false,
   reactStrictMode: true,
   distDir: 'build',
+  output: 'export',
+  images: {
+    loader: 'custom',
+    loaderFile: './my-loader.ts',
+  },
   swcMinify: true,
   trailingSlash: false,
-  images: {
-    domains: ['images.unsplash.com', 'source.unsplash.com'],
-  },
 };
 
 module.exports = nextConfig;
