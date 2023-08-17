@@ -21,6 +21,7 @@ const nextConfig = {
   poweredByHeader: false,
   productionBrowserSourceMaps: false,
   reactStrictMode: true,
+  distDir: 'build',
   swcMinify: true,
   trailingSlash: false,
   images: {

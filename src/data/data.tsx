@@ -1,13 +1,13 @@
 import {
   ArrowDownTrayIcon,
+  BuildingLibraryIcon,
   BuildingOffice2Icon,
   CalendarIcon,
+  EnvelopeOpenIcon,
   FlagIcon,
   MapIcon,
-  SparklesIcon,
-  BuildingLibraryIcon,
-  EnvelopeOpenIcon,
   PhoneIcon,
+  SparklesIcon,
 } from '@heroicons/react/24/outline';
 
 import {
@@ -18,9 +18,9 @@ import {
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
-import heroImage from '../images/wallpaper.jpg';
+// import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
+// import TwitterIcon from '../components/Icon/TwitterIcon';
+
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
@@ -34,6 +34,8 @@ import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
+import heroImage from '../images/wallpaper.jpg';
+
 import {
   About,
   ContactSection,
@@ -111,7 +113,7 @@ export const aboutData: About = {
     {label: 'Email', text: 'kiranbodipati@gmail.com', Icon: EnvelopeOpenIcon},
     {label: 'Study', text: 'Nanyang Technological University, Singapore', Icon: BuildingLibraryIcon},
     {label: 'Employment', text: 'LandWatchman Technologies Pvt Ltd', Icon: BuildingOffice2Icon},
-    {label: 'Location', text: 'Bangalore / Singapore', Icon: MapIcon},
+    {label: 'Location', text: 'Bangalore / Singapore', Icon: MapIcon} ,
     {label: 'Age', text: '23', Icon: CalendarIcon},
     {label: 'Nationality', text: 'Indian', Icon: FlagIcon},
     {label: 'Interests', text: 'Scuba Diving, Travelling, Poetry, Taylor Swift', Icon: SparklesIcon},
@@ -289,8 +291,8 @@ export const experience: TimelineItem[] = [
     title: 'Co-Founder & Data Scientist',
     content: (
       <p>
-          Building a Face Identification model using PyTorch to count users walking in and out of stores, provide analytics of customer behaviours in stores, improve customer hospitality, & provide ease of customer checkout at purchase point.
-          Collaborated in business development, business expansion strategies and customer acquisition strategies.
+        Building a Face Identification model using PyTorch to count users walking in and out of stores, provide analytics of customer behaviours in stores, improve customer hospitality, & provide ease of customer checkout at purchase point.
+        Collaborated in business development, business expansion strategies and customer acquisition strategies.
       </p>
     ),
   },
@@ -300,8 +302,8 @@ export const experience: TimelineItem[] = [
     title: 'Data Science Intern',
     content: (
       <p>
-          Performed Root cause analysis for fault detection in manufacturing processes using Bayesian Belief Networks to reduce downtime by 15%.
-          Developed pre-processing tool of automation pipeline, incremental learning algorithms to update the BBN and leveraged Pytest to unit test the tool, and FastAPI, Streamlit & Plotly to deploy the user-interface.
+        Performed Root cause analysis for fault detection in manufacturing processes using Bayesian Belief Networks to reduce downtime by 15%.
+        Developed pre-processing tool of automation pipeline, incremental learning algorithms to update the BBN and leveraged Pytest to unit test the tool, and FastAPI, Streamlit & Plotly to deploy the user-interface.
       </p>
     ),
   },
@@ -311,8 +313,8 @@ export const experience: TimelineItem[] = [
     title: 'Data Science Intern',
     content: (
       <p>
-          Developed a general brand detection model pipeline to identify logos in daily objects present in product listings and classify brands by employing the OpenCV, YOLOv5 and Pytorch Frameworks.
-          Employed image pre-processing techniques, produced custom training edge cases, finetuned open-source CNN models, etc to improve recall & precision from 0.1 to 0.35 & 0.6 respectively (150 class model)
+        Developed a general brand detection model pipeline to identify logos in daily objects present in product listings and classify brands by employing the OpenCV, YOLOv5 and Pytorch Frameworks.
+        Employed image pre-processing techniques, produced custom training edge cases, finetuned open-source CNN models, etc to improve recall & precision from 0.1 to 0.35 & 0.6 respectively (150 class model)
       </p>
     ),
   },
@@ -322,7 +324,7 @@ export const experience: TimelineItem[] = [
     title: 'Full Stack Project Intern',
     content: (
       <p>
-          Designed end-to-end video game credits extraction service using OCR model to extract names and job titles of various people working on the game. Created a Flask and React based website to bind profiles of people listed in-game to Linkedin profiles, to deliver a real time search repository of game developers.
+        Designed end-to-end video game credits extraction service using OCR model to extract names and job titles of various people working on the game. Created a Flask and React based website to bind profiles of people listed in-game to Linkedin profiles, to deliver a real time search repository of game developers.
       </p>
     ),
   },
