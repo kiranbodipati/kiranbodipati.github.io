@@ -6,7 +6,6 @@ import {
   EnvelopeOpenIcon,
   FlagIcon,
   MapIcon,
-  PhoneIcon,
   SparklesIcon,
 } from '@heroicons/react/24/outline';
 
@@ -21,13 +20,13 @@ import LinkedInIcon from '../components/Icon/LinkedInIcon';
 // import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 // import TwitterIcon from '../components/Icon/TwitterIcon';
 
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
+// import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
 import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
+// import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
+// import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
+// import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
 import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
 import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
@@ -109,14 +108,14 @@ export const aboutData: About = {
   profileImageSrc: profilepic,
   description: ` Hi! I'm Kiran and I'm a graduate of Data Science and AI at NTU Singapore. I've spent the last four years exploring my passion for AI by working on various projects in various domains like NLP, Computer Vision, Graph networks, etc. Through my experiences, I've had the opportunity to improve my skills, and uphold my passion of utilizing technology for the betterment of humankind. `,
   aboutItems: [
-    {label: 'Phone', text: '+91 77609 53029 / +65 8247 4652', Icon: PhoneIcon},
     {label: 'Email', text: 'kiranbodipati@gmail.com', Icon: EnvelopeOpenIcon},
     {label: 'Study', text: 'Nanyang Technological University, Singapore', Icon: BuildingLibraryIcon},
-    {label: 'Employment', text: 'LandWatchman Technologies Pvt Ltd', Icon: BuildingOffice2Icon},
+    {label: 'Employment', text: 'Terralytics Analysis Pvt Ltd', Icon: BuildingOffice2Icon},
+    {label: 'Employment', text: 'MyProp India ', Icon: BuildingOffice2Icon},
     {label: 'Location', text: 'Bangalore / Singapore', Icon: MapIcon} ,
-    {label: 'Age', text: '23', Icon: CalendarIcon},
+    {label: 'Research Interests', text: 'Machine Learning, Computer Vision, NLP, Data Science', Icon: CalendarIcon},
     {label: 'Nationality', text: 'Indian', Icon: FlagIcon},
-    {label: 'Interests', text: 'Scuba Diving, Travelling, Poetry, Taylor Swift', Icon: SparklesIcon},
+    {label: 'Personal Interests', text: 'Scuba Diving, Hiking,Travelling, Poetry ', Icon: SparklesIcon},
   ],
 };
 
@@ -199,47 +198,47 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage1,
+    title: 'Text Restoration using Image Super Resolution',
+    description: 'Improvements to the state of the art Real-ESRGAN Model for Scene Text Image Super Resolution',
+    url: 'https://hdl.handle.net/10356/166103',
+    image: porfolioImage8,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'RedPILS',
+    description: 'Search Engine of subreddits and comments related to the Indian Political Scenario and analysis into the polarity of the comments/subreddits.',
+    url: 'https://github.com/Sdidt/RedPILS',
     image: porfolioImage2,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Urban Planning System for Enhancement of Transport',
+    description: 'Netwrok graph analysis and model to optimise the public transport systems (Buses and Metro Rails) in Singapore',
+    url: 'https://github.com/kiranbodipati/urban_planning_system',
     image: porfolioImage3,
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Speaker Segmented Speech Emotion Analyser',
+    description: 'Segmented speech analysis in a conversation, to identify diff  speakers in conversation & different emotions exhibited.',
+    url: 'https://github.com/kiranbodipati/Speech_Emotion_recognition',
     image: porfolioImage4,
   },
-  {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage7,
-  },
+  // {
+  //   title: 'Project title 5',
+  //   description: 'Give a short description of your project here.',
+  //   url: 'https://reactresume.com',
+  //   image: porfolioImage5,
+  // },
+  // {
+  //   title: 'Project title 6',
+  //   description: 'Give a short description of your project here.',
+  //   url: 'https://reactresume.com',
+  //   image: porfolioImage6,
+  // },
+  // {
+  //   title: 'Project title 7',
+  //   description: 'Give a short description of your project here.',
+  //   url: 'https://reactresume.com',
+  //   image: porfolioImage7,
+  // },
   {
     title: 'Project title 8',
     description: 'Give a short description of your project here.',
@@ -364,23 +363,8 @@ export const contact: ContactSection = {
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
-    },
-    {
-      type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
-    },
-    {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
-    },
-    {
-      type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'kiranbodipati@gmail.com',
+      href: 'mailto:kiranbodipati@gmail.com',
     },
   ],
 };

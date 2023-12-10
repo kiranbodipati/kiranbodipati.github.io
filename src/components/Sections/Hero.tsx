@@ -1,6 +1,7 @@
 import {ChevronDownIcon} from '@heroicons/react/24/outline';
 import classNames from 'classnames';
-import Image from 'next/image';
+// import Image from 'next/image';
+import ExportedImage from "next-image-export-optimizer";
 import {FC, memo} from 'react';
 
 import {heroData, SectionId} from '../../data/data';
@@ -13,7 +14,7 @@ const Hero: FC = memo(() => {
   return (
     <Section noPadding sectionId={SectionId.Hero}>
       <div className="relative flex h-screen w-full items-center justify-center">
-        <Image
+        <ExportedImage
           alt={`${name}-image`}
           className="absolute z-0 h-full w-full object-cover"
           placeholder="blur"

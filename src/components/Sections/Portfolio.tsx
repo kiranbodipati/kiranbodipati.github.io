@@ -1,6 +1,7 @@
 import {ArrowTopRightOnSquareIcon} from '@heroicons/react/24/outline';
 import classNames from 'classnames';
-import Image from 'next/image';
+// import Image from 'next/image';
+import ExportedImage from "next-image-export-optimizer";
 import {FC, memo, MouseEvent, useCallback, useEffect, useRef, useState} from 'react';
 
 import {isMobile} from '../../config';
@@ -23,7 +24,7 @@ const Portfolio: FC = memo(() => {
                   className={classNames(
                     'relative h-max w-full overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl',
                   )}>
-                  <Image alt={title} className="h-full w-full" placeholder="blur" src={image} />
+                  <ExportedImage alt={title} className="h-full w-full" placeholder="blur" src={image} />
                   <ItemOverlay item={item} />
                 </div>
               </div>

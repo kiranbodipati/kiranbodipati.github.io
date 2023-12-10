@@ -1,5 +1,6 @@
 import classNames from 'classnames';
-import Image from 'next/image';
+// import Image from 'next/image';
+import ExportedImage from "next-image-export-optimizer";
 import {FC, memo} from 'react';
 
 import {aboutData, SectionId} from '../../data/data';
@@ -13,7 +14,7 @@ const About: FC = memo(() => {
         {!!profileImageSrc && (
           <div className="col-span-1 flex justify-center md:justify-start">
             <div className="relative h-24 w-24 overflow-hidden rounded-xl md:h-32 md:w-32">
-              <Image alt="about-me-image" className="h-full w-full object-cover" src={profileImageSrc} />
+              <ExportedImage alt="about-me-image" className="h-full w-full object-cover" src={profileImageSrc} />
             </div>
           </div>
         )}
