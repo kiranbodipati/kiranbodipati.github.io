@@ -93,6 +93,17 @@ export interface TimelineItem {
   content: JSX.Element;
 }
 
+
+export interface PublicationItem {
+  date: string;
+  location: string;
+  authors: string;
+  url: JSX.Element;
+  title: string;
+  cite_as: JSX.Element;
+  content: JSX.Element;
+}
+
 /**
  * Testimonial section
  */
