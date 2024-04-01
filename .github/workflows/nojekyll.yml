@@ -1,0 +1,20 @@
+name: Create .nojekyll File
+
+on:
+  push:
+    branches:
+      - gh-pages
+
+jobs:
+  create-nojekyll:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create .nojekyll file
+        run: touch .nojekyll
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Add .nojekyll file"
+          file_pattern: .nojekyll
+        env:
+          GITHUB_TOKEN: ${{ secrets.WORKFLOW_TOKEN }}
