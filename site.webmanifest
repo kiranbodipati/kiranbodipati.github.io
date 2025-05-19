@@ -1,6 +1,6 @@
 {
-  "name": "Kiran Bodipati's Portfolio",
-  "short_name": "Kiran Bodipati",
+  "name": "react-resume-template",
+  "short_name": "react-resume-template",
   "icons": [
     {"src": "/icon-192.png", "type": "image/png", "sizes": "192x192"},
     {"src": "/icon-512.png", "type": "image/png", "sizes": "512x512"}
