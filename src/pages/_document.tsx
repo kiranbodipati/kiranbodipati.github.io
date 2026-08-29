@@ -7,15 +7,19 @@ import {Head, Html, Main, NextScript} from 'next/document';
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html className="scroll-smooth dark" lang="en">
       <Head>
         <meta charSet="utf-8" />
-        {/* google translate breaks react:
-          - https://github.com/facebook/react/issues/11538
-          - https://bugs.chromium.org/p/chromium/issues/detail?id=872770 */}
         <meta content="notranslate" name="google" />
+        <meta content="#090d16" name="theme-color" />
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link crossOrigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+          rel="stylesheet"
+        />
       </Head>
-      <body className="bg-black">
+      <body className="bg-[#090d16] text-slate-100 antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
         <Main />
         <NextScript />
       </body>

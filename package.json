@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "build": "yarn compile && yarn next build && yarn next export && yarn next-image-export-optimizer",
+    "build": "yarn compile && yarn next build && yarn next-image-export-optimizer && node -e \"require('fs').writeFileSync('build/.nojekyll', '')\"",
     "clean": "rm -rf build-tsc .next",
     "compile": "yarn run -T tsc --build --verbose",
     "dev": "yarn compile && yarn next dev",
@@ -12,7 +12,7 @@
     "start": "yarn next start",
     "sitemap": "yarn next-sitemap",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build -t"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.16",

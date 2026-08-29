@@ -1,18 +1,21 @@
-import {FC, memo, PropsWithChildren} from 'react';
+import {FC, memo, PropsWithChildren, ReactNode} from 'react';
 
-const ResumeSection: FC<PropsWithChildren<{title: string}>> = memo(({title, children}) => {
+const ResumeSection: FC<PropsWithChildren<{title: string; icon?: ReactNode}>> = memo(({title, icon, children}) => {
   return (
-    <div className="grid grid-cols-1 gap-y-4 py-8 first:pt-0 last:pb-0  md:grid-cols-4">
-      <div className="col-span-1 flex justify-center md:justify-start">
-        <div className="relative h-max">
-          <h2 className="text-xl font-bold uppercase text-neutral-800">{title}</h2>
-          <span className="absolute inset-x-0 -bottom-1 border-b-2 border-orange-400" />
-        </div>
+    <div className="flex flex-col gap-y-6 pt-12 first:pt-0">
+      <div className="flex items-center gap-x-3 pb-3 border-b border-white/10">
+        {icon && (
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-indigo-500/20 to-cyan-500/20 text-cyan-400 border border-cyan-500/30 shadow-md shadow-cyan-500/10">
+            {icon}
+          </div>
+        )}
+        <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">{title}</h3>
       </div>
-      <div className="col-span-1 flex flex-col md:col-span-3">{children}</div>
+      <div className="flex flex-col gap-y-6">{children}</div>
     </div>
   );
 });
 
 ResumeSection.displayName = 'ResumeSection';
 export default ResumeSection;
+

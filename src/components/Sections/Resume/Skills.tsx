@@ -1,16 +1,37 @@
-import {FC, memo, PropsWithChildren, useMemo} from 'react';
+import {CheckCircleIcon} from '@heroicons/react/24/outline';
+import classNames from 'classnames';
+import {FC, memo} from 'react';
 
 import {Skill as SkillType, SkillGroup as SkillGroupType} from '../../../data/dataDef';
 
-export const SkillGroup: FC<PropsWithChildren<{skillGroup: SkillGroupType}>> = memo(({skillGroup}) => {
-  const {name, skills} = skillGroup;
+export const SkillGroup: FC<{skillGroup: SkillGroupType}> = memo(({skillGroup}) => {
+  const {name, skills, context} = skillGroup;
+
   return (
-    <div className="flex flex-col">
-      <span className="text-center text-lg font-bold">{name}</span>
-      <div className="flex flex-col gap-y-2">
-        {skills.map((skill, index) => (
-          <Skill key={`${skill.name}-${index}`} skill={skill} />
-        ))}
+    <div className="glass-card glass-card-hover rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all">
+      <div>
+        {/* Header */}
+        <div className="flex items-center justify-between gap-2 border-b border-white/5 pb-3 mb-3">
+          <h4 className="text-base sm:text-lg font-bold text-white tracking-tight">{name}</h4>
+          <span className="rounded-full bg-indigo-500/10 border border-indigo-500/20 px-2.5 py-0.5 text-[11px] font-semibold text-indigo-300 shrink-0">
+            {skills.length} competencies
+          </span>
+        </div>
+
+        {/* Demonstrated in Context */}
+        {context && (
+          <p className="text-xs text-slate-400 mb-4 flex items-center gap-x-1.5">
+            <span className="text-cyan-400 font-semibold">In Practice:</span>
+            <span className="italic">{context}</span>
+          </p>
+        )}
+
+        {/* Competency Badge Cloud */}
+        <div className="flex flex-wrap gap-2 pt-1">
+          {skills.map((skill, index) => (
+            <Skill key={`${skill.name}-${index}`} skill={skill} />
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -19,17 +40,22 @@ export const SkillGroup: FC<PropsWithChildren<{skillGroup: SkillGroupType}>> = m
 SkillGroup.displayName = 'SkillGroup';
 
 export const Skill: FC<{skill: SkillType}> = memo(({skill}) => {
-  const {name, level, max = 10} = skill;
-  const percentage = useMemo(() => Math.round((level / max) * 100), [level, max]);
+  const {name, highlight} = skill;
 
   return (
-    <div className="flex flex-col">
-      <span className="ml-2 text-sm font-medium">{name}</span>
-      <div className="h-5 w-full overflow-hidden rounded-full bg-neutral-300">
-        <div className="h-full rounded-full bg-orange-400" style={{width: `${percentage}%`}} />
-      </div>
-    </div>
+    <span
+      className={classNames(
+        'inline-flex items-center gap-x-1.5 rounded-xl px-3 py-1.5 text-xs font-medium transition-all duration-200 cursor-default select-none',
+        highlight
+          ? 'bg-gradient-to-r from-indigo-500/15 to-cyan-500/15 text-cyan-300 border border-cyan-500/30 shadow-sm shadow-cyan-500/10 hover:border-cyan-400/50'
+          : 'bg-white/5 text-slate-300 border border-white/10 hover:bg-white/10 hover:text-white hover:border-white/25',
+      )}>
+      {highlight && <CheckCircleIcon className="h-3.5 w-3.5 text-cyan-400 shrink-0" />}
+      <span>{name}</span>
+    </span>
   );
 });
 
 Skill.displayName = 'Skill';
+
+

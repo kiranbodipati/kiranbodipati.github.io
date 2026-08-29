@@ -61,15 +61,16 @@ export interface Stat {
 /**
  * Skills section
  */
-
 export interface Skill {
   name: string;
-  level: number;
+  level?: number;
   max?: number;
+  highlight?: boolean;
 }
 
 export interface SkillGroup {
   name: string;
+  context?: string;
   skills: Skill[];
 }
 
@@ -81,6 +82,10 @@ export interface PortfolioItem {
   description: string;
   url: string;
   image: string | StaticImageData;
+  tags?: string[];
+  category?: 'ai-vision' | 'nlp-speech' | 'systems-analytics' | 'all';
+  githubUrl?: string;
+  paperUrl?: string;
 }
 
 /**
@@ -91,6 +96,10 @@ export interface TimelineItem {
   location: string;
   title: string;
   content: JSX.Element;
+  tags?: string[];
+  badge?: string;
+  employmentType?: 'Full-time' | 'Internship' | 'Co-Founder' | string;
+  workMode?: 'On-site' | 'Hybrid' | 'Remote' | string;
 }
 
 
@@ -102,6 +111,11 @@ export interface PublicationItem {
   title: string;
   cite_as: JSX.Element;
   content: JSX.Element;
+  badge?: string;
+  paperLink?: string;
+  posterLink?: string;
+  videoLink?: string;
+  citationText?: string;
 }
 
 /**
